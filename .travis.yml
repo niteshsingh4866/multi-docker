@@ -6,15 +6,15 @@ before_install:
 script:
   - echo "pushing image to docker hub"
 after_success:
-  - docker build -t nitesh/multi-client ./client
-  - docker build -t nitesh/multi-nginx ./nginx
-  - docker build -t nitesh/multi-server ./server
-  - docker build -t nitesh/multi-worker ./worker
+  - docker build -t nitesh4866/multi-client ./client
+  - docker build -t nitesh4866/multi-nginx ./nginx
+  - docker build -t nitesh4866/multi-server ./server
+  - docker build -t nitesh4866/multi-worker ./worker
 
   # login to docker
   - echo "$DockerPassword" | docker login -u "$DockerUser" --password-stdin
   #take those images and push them to dockerhub
-  - docker push nitesh/multi-client
-  - docker push nitesh/multi-nginx
-  - docker push nitesh/multi-server
-  - docker push nitesh/multi-worker
+  - docker push nitesh4866/multi-client
+  - docker push nitesh4866/multi-nginx
+  - docker push nitesh4866/multi-server
+  - docker push nitesh4866/multi-worker
