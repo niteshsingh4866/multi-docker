@@ -13,6 +13,7 @@ after_success:
 
   # login to docker
   - echo "$DockerPassword" | docker login -u "$DockerUser" --password-stdin
+  #take those images and push them to dockerhub
   - docker push nitesh/multi-client
   - docker push nitesh/multi-nginx
   - docker push nitesh/multi-server
